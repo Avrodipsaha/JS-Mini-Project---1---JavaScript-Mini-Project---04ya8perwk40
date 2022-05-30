@@ -19,10 +19,12 @@ let food = { x: 6, y: 7 };
 
 function main(ctime) {
     window.requestAnimationFrame(main); //create game loop..
-
-    if ((ctime - lastPaintTime) / 1000 < 1 / speed) { // print after 1/speed time
+     
+    // print after 1/speed time
+    if ((ctime - lastPaintTime) / 1000  < (1 / speed) ) { 
         return;
     }
+    
     lastPaintTime = ctime;
     gameEngine();
 }
